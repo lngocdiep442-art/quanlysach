@@ -4,13 +4,11 @@ import java.util.Scanner;
 public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // Tạo danh sách quản lý bằng ArrayList
         ArrayList<Sach> dsSach = new ArrayList<>();
 
         System.out.print("Nhập số lượng sách muốn thêm vào thư viện: ");
         int n = Integer.parseInt(sc.nextLine());
 
-        // Nhập thông tin từng cuốn sách
         for (int i = 0; i < n; i++) {
             System.out.println("\n--- Nhập thông tin sách thứ " + (i + 1) + " ---");
             System.out.print("Nhập mã sách: ");
@@ -28,13 +26,13 @@ public class Test {
             System.out.print("Nhập số lượng: ");
             int soLuong = Integer.parseInt(sc.nextLine());
 
-            // Tạo đối tượng Sach và thêm vào danh sách
+            // Khởi tạo đối tượng qua Constructor đầy đủ tham số
             Sach s = new Sach(maSach, tieuDe, tacGia, namXuatBan, soLuong);
             dsSach.add(s);
         }
 
-        // Xuất danh sách sách
-        System.out.println("\n================ DANH SÁCH SÁCH TRONG THƯ VIỆN ================");
+        // In danh sách sách ra màn hình
+        System.out.println("\n================ DANH SÁCH SÁCH (TUẦN 8 - ĐÓNG GÓI) ================");
         for (Sach s : dsSach) {
             s.hienThiThongTin();
         }
